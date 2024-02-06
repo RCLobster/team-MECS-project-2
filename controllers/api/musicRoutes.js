@@ -27,15 +27,15 @@ router.get('/songs', async (req, res) => {
 router.get('/playlists', async (req, res) => {
     try {
         const playlistData = await Playlist.findAll({
-            include: [{ model: Song, through: PlaylistSongs }]
+            include: [{ model: Song, through: PlaylistSongs }, { model: User }]
         });
 
-        const playlist = playlistData.map(pd => pd.get({ plain: true }));
-        res.status(200).json(playlist);
+        const playlists = playlistData.map(pd => pd.get({ plain: true }));
+        //res.status(200).json(playlists);
 
-        // res.render('playlist', {
-        //     playlist
-        // });
+        res.render('playlist', {
+            playlists
+        });
 
     } catch (err) {
         res.status(500).json(err);
