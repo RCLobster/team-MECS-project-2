@@ -5,7 +5,7 @@ class Playlist extends Model {}
 
 Playlist.init(
     {
-        play_id: {
+        id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
@@ -21,14 +21,7 @@ Playlist.init(
                 model: 'user',
                 key: 'id',
             },
-        },
-        song_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'song',
-                key: 'song_id',
-            },
-        },
+        }
     },
     {
         sequelize,
