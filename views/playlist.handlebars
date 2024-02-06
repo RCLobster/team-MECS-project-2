@@ -6,13 +6,38 @@
     <title>Playlist</title>
 </head>
 <body>
-    <section class="playlist">
-  <img src="/images/{{playlist.filename}}" alt="{{playlist.description}}">
-  <div class="playlist-details">
-    <h3>{{playlist.title}}</h3>
-    <p>By: {{playlist.artist}}</p>
 
-    
-</section>
+    <video autoplay muted loop id="myVideo">
+  <source src="/images/playlistsong.mp4" type="video/mp4">
+</video>
+    <table class="table table-striped">
+  ...
+</table>
+
+{{#if playlists.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current Projects:</h3>
+
+    {{#each playlists as |playlist|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4>{{playlist.play_name}}</h4>
+      </div>
+      <div class="col-md-4">
+        <ul>
+            <li>
+                <p>Title: {{playlist.songs.[0].title}}</p>
+                <p>Artist: {{playlist.songs.[0].artist}}</p>
+                <p>Song: {{playlist.songs.[0].album}}</p>
+            </li>
+        </ul>
+        <button class="btn btn-sm btn-danger" data-id="{{song.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
 </body>
 </html>
