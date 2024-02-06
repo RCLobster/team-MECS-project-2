@@ -6,14 +6,24 @@
     <link rel="stylesheet" href="/css/jass.css">
     <link rel="stylesheet" href="/css/style.css">
     <title>Playlist Maker</title>
+<div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
 
 </head>
 <nav>
-  <a id="home-bttn">Home</a>
-  
+   <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
 
-</nav>
+   <button id="homepage">homepage</button>
+
+   </nav>
+   
+
 <body>
+
    {{{body}}}
 </body>
 </html>
