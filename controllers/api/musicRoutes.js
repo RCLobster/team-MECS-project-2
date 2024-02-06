@@ -7,8 +7,8 @@ const { Song, Playlist, User, PlaylistSongs } = require('../../models');
 */
 
 // /api/music/songs FIND ALL SONGS IN DB
-router.get('/songs', async (req, res) =>{
-    try{
+router.get('/songs', async (req, res) => {
+    try {
         const songData = await Song.findAll();
 
         //const songs = songData.get({ plain: true });
@@ -18,26 +18,26 @@ router.get('/songs', async (req, res) =>{
             songs;
         });
         */
-    }catch(err){
+    } catch (err) {
         res.status(500).json(err);
     }
 });
 
 // /api/music/playlists
-router.get('/playlists', async (req, res) =>{
-    try{
+router.get('/playlists', async (req, res) => {
+    try {
         const playlistData = await Playlist.findAll({
-            include: [{ model: Song, through: PlaylistSongs }]
+            include: [{ model: Song, through: PlaylistSongs }, { model: User }]
         });
 
-        const playlist = playlistData.map(pd => pd.get({ plain: true }));
-        res.status(200).json(playlist);
-        
-        // res.render('playlist', {
-        //     playlist
-        // });
-        
-    }catch(err){
+        const playlists = playlistData.map(pd => pd.get({ plain: true }));
+        //res.status(200).json(playlists);
+
+        res.render('playlist', {
+            playlists
+        });
+
+    } catch (err) {
         res.status(500).json(err);
     }
 });
