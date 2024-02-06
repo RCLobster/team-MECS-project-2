@@ -11,13 +11,13 @@ router.get('/songs', async (req, res) => {
     try {
         const songData = await Song.findAll();
 
-        //const songs = songData.get({ plain: true });
-        res.status(200).json(songData);
-        /*
+        const songs = songData.map(sg => sg.get({ plain: true }));
+        //res.status(200).json(songData);
+        
         res.render('songs', {
-            songs;
+            songs
         });
-        */
+        
     } catch (err) {
         res.status(500).json(err);
     }
