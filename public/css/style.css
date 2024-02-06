@@ -50,7 +50,10 @@ header, .project:not(:last-child) {
     transform: translateX(-50%) translateY(-50%);
 }
 
-
+h3{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}
 /* Add some content at the bottom of the video/page
 .content {
   position: fixed;
