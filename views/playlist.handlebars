@@ -11,12 +11,9 @@
   <source src="/images/playlistsong.mp4" type="video/mp4">
 </video>
     <table class="table table-striped">
-  ...
-</table>
-
-{{#if playlists.length}}
+  {{#if playlists.length}}
   <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
+    <h3>Playlist</h3>
 
     {{#each playlists as |playlist|}}
     <div class="row mb-2">
@@ -37,6 +34,9 @@
     {{/each}}
   </div>
   {{/if}}
+</table>
+
+
 </div>
 
 </body>
