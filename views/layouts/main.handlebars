@@ -8,7 +8,17 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>Playlist Maker</title>
 </head>
+<nav>
+     <a href="/profile">profile</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+
+      <button class="button" id="homepage">homepage</button>
+    </nav>
+
 <body>
+  
      <!-- The video -->
 <video autoplay muted loop id="myVideo">
   <source src="/images/music1.mp4" type="video/mp4">
