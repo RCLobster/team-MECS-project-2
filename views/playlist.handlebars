@@ -12,7 +12,9 @@
     <video autoplay muted loop id="myVideo">
         <source src="/images/playlistsong.mp4" type="video/mp4">
     </video>
-    <table class="table">
+
+    <div class="ghost">
+        <table class="table">
         <thead>
             {{#each playlists as |playlist|}}
             <h3>{{playlist.play_name}}</h3>
@@ -36,6 +38,8 @@
             {{/each}}
         </tbody>
     </table>
+    </div>
+    
    
 </body>
 
