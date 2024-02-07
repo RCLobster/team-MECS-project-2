@@ -14,11 +14,11 @@
     <h2>Create Playlist</h2>
     <div>
         <h3>Playlist</h3>
-        <label for="playlist-name">Playlist name:</label>
+        <label for="playlist-name" class="playlistText">Playlist name:</label>
         <input type="text" id="playlist-name" name="playlist-name"><br><br>
         <h3>Songs</h3>
         <div class="form-group">
-            <label for="song-selector">Select Songs</label>
+            <label for="song-selector" class="playlistText">Select Songs</label>
             <select multiple class="form-control" id="song-selector">
                 {{#each songs as |song|}}
                 <option value="{{song.id}}">{{song.title}}</option>

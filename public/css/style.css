@@ -59,7 +59,7 @@ th {
   padding: 25px;
 }
 
-h3{
+h3, h2{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   color: lightblue;
@@ -72,7 +72,9 @@ h3{
   margin: 0 auto;
   box-shadow: 3px 3px lightpink;
 }
-
+.playlistText{
+  color: aliceblue;
+}
 .profileText{
   margin-left: 650px;
 }
