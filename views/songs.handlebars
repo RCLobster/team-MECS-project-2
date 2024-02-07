@@ -1,35 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
-    {{#if songs.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
-
-    {{#each songs as |playlist|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4>{{songs.play_name}}</h4>
-      </div>
-      <div class="col-md-4">
-        <ul>
-            <li>
-                <p>Title: {{songs.[0].title}}</p>
-                <p>Artist: {{songs.[0].artist}}</p>
-                <p>Song: {{songs.[0].album}}</p>
-            </li>
-
-        {{/each}}
-        <div>
-            {{/if}}
-        </div>
+  <h3>Current songs</h3>
+  {{#if songs.length}}
+  <div class="col-md-6 project-list"></div>
 
 
+
+  {{#each songs as|song|}}
+  <div class="row mb-2">
+    <p>{{song.title}}</p>
+    <p>{{song.artist}}</p>
+    <p>{{song.album}}</p>
+  </div>
+
+
+
+  {{/each}}
+
+  {{/if}}
 
 
 </body>
+
 </html>
