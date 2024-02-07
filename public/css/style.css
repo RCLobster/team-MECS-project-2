@@ -1,53 +1,109 @@
 * {
-    padding:0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
-#container{
-  width: 65%;
-  height: 50%;
-  margin: 50px;
+.navbar{
+  font-size: small;
   display: flex;
-  margin: 150px 350px;
-  padding: 8px;
+  margin: auto 0;
+  justify-content: end;
+}
+.myform {
+  padding: 28px;
   border: 2px solid darkslategray;
   box-shadow: inset 2px 2px 3px pink, 3px 3px 5px white;
   background: #cccccc44;
+  margin-top: 200px;
 }
-header, .project:not(:last-child) {
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .no-button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    color: #1b89bc;
-    text-decoration: none;
-    font-size: 100%;
-  }
-  
-  .no-button:hover {
-    color: #065b83;
-    text-decoration: underline;
-  }
-  
-  .dollar-amount {
-    color: #056605;
-    font-weight: bold;
-    /* margin-left: -5px;*/
-  }
- 
-  /* Style the video: 100% width and height to cover the entire window */
+
+header,
+.project:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+.border-left {
+  border-left: 1px solid darkgrey;
+
+}
+
+.no-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #1b89bc;
+  text-decoration: none;
+  font-size: 100%;
+}
+
+.no-button:hover {
+  color: #065b83;
+  text-decoration: underline;
+}
+
+
+/* Style the video: 100% width and height to cover the entire window */
 #myVideo {
   position: fixed;
-    top: 50%;
-    left: 50%;
-    min-height: 100%;
-    width: 100%;
-    height: auto;
-    z-index: -100;
-    transform: translateX(-50%) translateY(-50%);
+  top: 50%;
+  left: 50%;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+tr,
+th {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: lightblue;
+  text-shadow: 1px 2px 5px lightpink;
+  background-color: #065b834e;
+  padding: 25px;
+}
+
+h3{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  color: lightblue;
+  text-shadow: 1px 2px 5px lightpink;
+  background-color: #065b834e;
+  padding: 25px;
+}
+.table {
+  width: 50%;
+  margin: 0 auto;
+  box-shadow: 3px 3px lightpink;
+}
+
+.profileText{
+  margin-left: 650px;
+}
+
+.profileContainer{
+  border: 1px solid grey;
+  box-shadow: inset 1px 2px 5px lightpink;
+  background: rgba(30, 45, 57, 0.109);
+  width: 95%;
+}
+
+.profileTitle{
+  border: 3px solid #065b83;
+}
+
+h1{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #065b83;
+  text-shadow: 1px 2px 3px #ccc;
+}
+
+td {
+  border: 2px solid #cccccc44;
+  box-shadow: inset 2px 2px 3px pink, 3px 3px 5px white;
+  background: #cccccc44;
+  padding: 5px;
 }
 
 

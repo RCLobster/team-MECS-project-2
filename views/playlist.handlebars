@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playlist</title>
 </head>
+
 <body>
+
+    <video autoplay muted loop id="myVideo">
+        <source src="/images/playlistsong.mp4" type="video/mp4">
+    </video>
+
+    <div class="ghost">
+         {{#each playlists as |playlist|}}
+      
+                <h3> {{playlist.play_name}}</h3>
+            
+        <table class="table">
+        <thead>
+           
+            
+            <tr>
+            
+                <th scope="col">#</th>
+                <th scope="col">Artist</th>
+                <th scope="col">Song Title</th>
+                <th scope="col">Album</th>
+            </tr>
+        </thead>
+        <tbody>
+         {{#each playlist.songs as | song |}}
+            <tr>
+             
+                <td scope="row">{{song.playlistsongs.id}}</td>
+                <td>{{song.title}}</td>
+                <td>{{song.artist}}</td>
+                <td>{{song.album}}</td>
+            </tr>
+            {{/each}}
+        
+            
+            
+            
+        </tbody>
+    </table>
+    {{/each}}
+    </div>
     
+   
 </body>
+
 </html>

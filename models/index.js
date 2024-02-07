@@ -1,25 +1,34 @@
 const User = require('./User');
 const Song = require('./Song');
 const Playlist = require('./Playlist');
+const PlaylistSongs = require('./PlaylistSongs');
 
-User.belongsToMany(Song, {
-    // Define the third table needed to store the foreign keys
-    through: {
-      model: Playlist,
-      unique: false
-    },
-    // Define an alias for when data is retrieved
-    as: 'user_songs'
-  });
-  
-  Song.belongsToMany(User, {
-    // Define the third table needed to store the foreign keys
-    through: {
-      model: Playlist,
-      unique: false
-    },
-    // Define an alias for when data is retrieved
-    as: 'songsOnPlay'
-  });
+User.hasMany(Playlist, {
+  foreignKey: 'user_id'
+});
 
-  module.exports = {User, Song, Playlist};
+Playlist.belongsTo(User, {
+  foreignKey: 'user_id'
+});
+
+Playlist.belongsToMany(Song, {
+  // Define the third table needed to store the foreign keys
+  through: {
+    model: PlaylistSongs,
+    unique: false
+  },
+  // Define an alias for when data is retrieved
+  // as: 'playlist_songs'
+});
+
+Song.belongsToMany(Playlist, {
+  // Define the third table needed to store the foreign keys
+  through: {
+    model: PlaylistSongs,
+    unique: false
+  },
+  // Define an alias for when data is retrieved
+  // as: 'songsOnPlaylist'
+});
+
+module.exports = { User, Song, Playlist, PlaylistSongs };
