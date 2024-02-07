@@ -73,4 +73,23 @@ router.get('/playlists', async (req, res) => {
 });
 
 
+router.get('/createplaylists', async (req, res) => {
+    try {
+        const songData = await Song.findAll({
+            order: [['title', 'ASC']],
+        });
+
+        const songs = songData.map(sg => sg.get({ plain: true }));
+        //res.status(200).json(songData);
+        
+        res.render('createplaylist', {
+            songs,
+            logged_in: req.session.logged_in
+        });
+        
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
