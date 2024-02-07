@@ -13,12 +13,16 @@
         ...
     </table>
 
-    <h1>Welcome {{req.session.user_id}}</h1>
+<div class="profileText">
+     <h1>Welcome {{username}}!</h1>
 
-    {{#if playlists.length}}
+<div class="profileContainer">
+     {{#if playlists.length}}
     <div class="col-md-6 project-list">
-        <h3>Current Projects:</h3>
-
+        <div class="profileTitle">
+            <h2>Current Projects:</h2>
+        </div>
+    
         {{#each playlists as |playlist|}}
         <div class="row mb-2">
             <div class="col-md-8">
@@ -40,5 +44,9 @@
     </div>
     {{/if}}
     </div>
+</div>
+   
+</div>
+   
 </body>
 </html>
