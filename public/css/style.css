@@ -50,19 +50,26 @@ header,
 }
 
 h3,
-h4,
-p {
+tr,
+th {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   color: lightblue;
   text-shadow: 1px 2px 5px rgba(255, 255, 255, 0.425);
 }
 
-td{
-  border: 2px solid aliceblue;
+.table {
+  display: block;
+  margin-top: 50px;
+  margin-left: 550px;
+}
+
+td {
+  border: 2px solid #cccccc44;
   box-shadow: inset 2px 2px 3px pink, 3px 3px 5px white;
   background: #cccccc44;
-  padding: 25px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 
