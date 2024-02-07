@@ -20,6 +20,9 @@ Song.init(
         album: {
             type: DataTypes.STRING,
         },
+        img: {
+            type: DataTypes.STRING,
+        }
     },
     {
         sequelize,
