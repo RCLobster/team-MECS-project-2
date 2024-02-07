@@ -35,7 +35,9 @@ router.get('/profile', withAuth, async (req, res) => {
 // /songs FIND ALL SONGS IN DB
 router.get('/songs', async (req, res) => {
     try {
-        const songData = await Song.findAll();
+        const songData = await Song.findAll({
+            order: [['title', 'ASC']],
+        });
 
         const songs = songData.map(sg => sg.get({ plain: true }));
         //res.status(200).json(songData);
