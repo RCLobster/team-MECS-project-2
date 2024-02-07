@@ -65,6 +65,7 @@ th {
   background-color: #065b834e;
   padding: 25px;
 }
+
 h3{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
@@ -75,7 +76,7 @@ h3{
 }
 .table {
   width: 25%;
-  display: block;
+  display: inline;
   margin-top: 50px;
   margin-left: 550px;
   box-shadow: 3px 3px lightpink;
@@ -88,8 +89,8 @@ h3{
 .profileContainer{
   border: 1px solid grey;
   box-shadow: inset 1px 2px 5px lightpink;
-  background: rgba(30, 45, 57, 0.395);
-  width: 75%;
+  background: rgba(30, 45, 57, 0.109);
+  width: 95%;
 }
 
 .profileTitle{

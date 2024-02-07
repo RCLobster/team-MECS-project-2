@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
 </head>
+
 <body>
     <video autoplay muted loop id="myVideo">
         <source src="/images/profilepg.mp4" type="video/mp4">
@@ -13,40 +15,41 @@
         ...
     </table>
 
-<div class="profileText">
-     <h1>Welcome {{username}}!</h1>
+    <div class="profileText">
+        <h1>Welcome {{username}}!</h1>
+        {{#if playlists.length}}
+        <div class="profileContainer">
 
-<div class="profileContainer">
-     {{#if playlists.length}}
-    <div class="col-md-6 project-list">
-        <div class="profileTitle">
-            <h2>Current Projects:</h2>
-        </div>
-    
-        {{#each playlists as |playlist|}}
-        <div class="row mb-2">
-            <div class="col-md-8">
-                <h4>{{playlist.play_name}}</h4>
+            <div class="project-list">
+                <div class="profileTitle">
+                    <h2>Current Projects:</h2>
+                </div>
+
+                {{#each playlists as |playlist|}}
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <h4>{{playlist.play_name}}</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <ol>
+                            {{#each playlist.songs as | song |}}
+                            <li>
+                                <p>Title: {{song.title}}</p>
+                                <p>Artist: {{song.artist}}</p>
+                                <p>Album: {{song.album}}</p>
+                            </li>
+                            {{/each}}
+                        </ol>
+                    </div>
+                </div>
+                {{/each}}
             </div>
-            <div class="col-md-4">
-                <ul>
-                    {{#each playlist.songs as | song |}}
-                    <li>
-                        <p>Title: {{song.title}}</p>
-                        <p>Artist: {{song.artist}}</p>
-                        <p>Album: {{song.album}}</p>
-                    </li>
-                    {{/each}}
-                </ul>
-            </div>
+            {{/if}}
         </div>
-        {{/each}}
     </div>
-    {{/if}}
+
     </div>
-</div>
-   
-</div>
-   
+
 </body>
+
 </html>
