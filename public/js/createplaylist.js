@@ -2,8 +2,19 @@ const createPlaylistHandler = async (event) => {
     event.preventDefault();
 
     const play_name = document.querySelector('#playlist-name').value.trim();
-    let song_id = document.querySelector('#songid').value.trim();
-    console.log(song_id);
+    let songs = document.querySelector('#song-selector');
+
+
+    songs = [...songs.selectedOptions].map(song => song.value);
+    console.log(songs);
+
+    if(play_name){
+        const response = await fetch('/api/music/playlist', {
+            method: 'POST',
+            body: JSON.stringify({ play_name, songs }),
+            headers: { 'Content-Type': 'application/json' },
+        });
+    }
 };
 
-document.querySelector('#cpbutton').addEventListener('click', addSongHandler)
+document.querySelector('#cpbutton').addEventListener('click', createPlaylistHandler)
