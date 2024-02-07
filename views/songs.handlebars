@@ -4,12 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Songs</title>
 </head>
 
 <body>
+  <video autoplay muted loop id="myVideo">
+        <source src="/images/playlistsong.mp4" type="video/mp4">
+    </video>
+
   <h3>All Songs</h3>
-  <div class="col-md-6 project-list">
+  <div class="project-list">
     {{#if songs.length}}
     <div class="row mb-2">
 
