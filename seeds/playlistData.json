@@ -10,5 +10,17 @@
     {
         "play_name": "Plane Songs",
         "user_id": 1
+    },
+    {
+        "play_name": "Ship Songs",
+        "user_id": 3
+    },
+    {
+        "play_name": "Jet Songs",
+        "user_id": 2
+    },
+    {
+        "play_name": "Truck Songs",
+        "user_id": 1
     }
 ]
