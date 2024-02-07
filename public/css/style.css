@@ -25,9 +25,7 @@ header,
   border-left: 1px solid darkgrey;
 
 }
-.button{
 
-}
 .no-button {
   background: none;
   border: none;
@@ -75,10 +73,8 @@ h3{
   padding: 25px;
 }
 .table {
-  width: 25%;
-  display: inline;
-  margin-top: 50px;
-  margin-left: 550px;
+  width: 50%;
+  margin: 0 auto;
   box-shadow: 3px 3px lightpink;
 }
 

@@ -14,11 +14,16 @@
     </video>
 
     <div class="ghost">
+         {{#each playlists as |playlist|}}
+      
+                <h3> {{playlist.play_name}}</h3>
+            
         <table class="table">
         <thead>
-            {{#each playlists as |playlist|}}
-            <h3>{{playlist.play_name}}</h3>
+           
+            
             <tr>
+            
                 <th scope="col">#</th>
                 <th scope="col">Artist</th>
                 <th scope="col">Song Title</th>
@@ -26,18 +31,22 @@
             </tr>
         </thead>
         <tbody>
-            
-            {{#each playlist.songs as | song |}}
+         {{#each playlist.songs as | song |}}
             <tr>
-                <th scope="row">{{song.playlistsongs.id}}</th>
+             
+                <td scope="row">{{song.playlistsongs.id}}</td>
                 <td>{{song.title}}</td>
                 <td>{{song.artist}}</td>
                 <td>{{song.album}}</td>
             </tr>
             {{/each}}
-            {{/each}}
+        
+            
+            
+            
         </tbody>
     </table>
+    {{/each}}
     </div>
     
    
