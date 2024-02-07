@@ -2,12 +2,7 @@
   padding: 0;
   margin: 0;
 }
-.navbar{
-  font-size: small;
-  display: flex;
-  margin: auto 0;
-  justify-content: end;
-}
+
 .myform {
   padding: 28px;
   border: 2px solid darkslategray;
@@ -59,7 +54,7 @@ th {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   color: lightblue;
-  text-shadow: 1px 2px 5px lightpink;
+  text-shadow: 1px 2px 5px lightblue;
   background-color: #065b834e;
   padding: 25px;
 }
@@ -84,19 +79,28 @@ h3{
 
 .profileContainer{
   border: 1px solid grey;
-  box-shadow: inset 1px 2px 5px lightpink;
+  box-shadow: 1px 2px 6px darkblue;
   background: rgba(30, 45, 57, 0.109);
   width: 95%;
+  padding: 15px;
+  border-radius: 5px;
 }
 
 .profileTitle{
-  border: 3px solid #065b83;
+  text-align: center;
+  text-shadow: 1px 2px 3px lightblue;
+  padding: 5px;
+  background-color: rgba(75, 74, 74, 0.233);
+  margin: 15px;
+  border-radius: 5px;
+  border: 1px solid #065b83;
 }
 
-h1{
+h1,h4{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #065b83;
   text-shadow: 1px 2px 3px #ccc;
+  
 }
 
 td {
@@ -106,6 +110,13 @@ td {
   padding: 5px;
 }
 
+p{
+  border: 1px solid grey;
+  font-size: small;
+  background-color: aliceblue;
+  padding: 5px;
+  box-shadow: 1px 2px 5px rgb(75, 74, 74);
+}
 
 /* Add some content at the bottom of the video/page
 .content {
