@@ -76,7 +76,8 @@ h3, h2{
   color: aliceblue;
 }
 .profileText{
-  margin-left: 650px;
+  width: 50%;
+  float: right;
 }
 
 .profileContainer{
@@ -86,6 +87,9 @@ h3, h2{
   width: 95%;
   padding: 15px;
   border-radius: 5px;
+}
+img{
+  width: 50%;
 }
 
 .profileTitle{

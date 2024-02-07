@@ -21,6 +21,9 @@ Playlist.init(
                 model: 'user',
                 key: 'id',
             },
+        },
+        img: {
+            type: DataTypes.STRING,
         }
     },
     {
