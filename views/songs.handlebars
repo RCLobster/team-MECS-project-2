@@ -19,9 +19,9 @@
       <tbody>
         {{#each songs as |song|}}
         <tr>
-          <td>{{song.title}}</td>
-          <td>{{song.artist}}</td>
-          <td>{{song.album}}</td>
+          <td><h5 class="p-style">{{song.title}}</h5></td>
+          <td><h5 class="p-style">{{song.artist}}</h5></td>
+          <td><h5 class="p-style">{{song.album}}</h5></td>
           <td><img src="{{song.img}}"></td>
         </tr>
         {{/each}}
@@ -48,7 +48,7 @@
       <label class="form-label">Album</label>
       <input type="text" class="form-control" id="album-input" placeholder="Add album title...">
     </div>
-    <button type="submit" class="btn btn-primary add-song-btn">Add Song</button>
+    <button type="submit" class="btn btn-primary add-song-btn" id="addBtn">Add Song</button>
   </form>
     <button id="upload_widget" class="cloudinary-button">Upload File</button>
 </div>
