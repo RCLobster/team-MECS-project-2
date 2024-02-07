@@ -2,31 +2,37 @@
     {
         "title": "Fat Bottomed Girls",
         "artist": "Queen",
-        "album": "Jazz"
+        "album": "Jazz",
+        "img": ""
     },
     {
         "title": "Miami",
         "artist": "Will Smith",
-        "album": "Big Willie Style"
+        "album": "Big Willie Style",
+        "img": ""
     },
     {
         "title": "Party In The USA",
         "artist": "Miley Cyrus",
-        "album": "The Time Of Our Lives"
+        "album": "The Time Of Our Lives",
+        "img": ""
     },
     {
         "title": "Levitating",
         "artist": "Dua Lipa",
-        "album": "Future Nostalgia"
+        "album": "Future Nostalgia",
+        "img": ""
     },
     {
         "title": "Mr. Blue Sky",
         "artist": "Electric Light Orchestra",
-        "album": "Out of the Blue"
+        "album": "Out of the Blue",
+        "img": ""
     },
     {
         "title": "Escape (The Pina Colada Song)",
         "artist": "Rupert Holmes",
-        "album": "Partners In Crime"
+        "album": "Partners In Crime",
+        "img": ""
     }
 ]
