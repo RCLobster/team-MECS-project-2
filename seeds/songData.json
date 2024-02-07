@@ -3,36 +3,36 @@
         "title": "Fat Bottomed Girls",
         "artist": "Queen",
         "album": "Jazz",
-        "img": ""
+        "img": "https://res.cloudinary.com/dmmvjuhbb/image/upload/v1707343464/Queen_Jazz_b5kv05.png"
     },
     {
         "title": "Miami",
         "artist": "Will Smith",
         "album": "Big Willie Style",
-        "img": ""
+        "img": "https://res.cloudinary.com/dmmvjuhbb/image/upload/v1707345876/WillSmith-BigWillieStyle_xr2uwf.jpg"
     },
     {
         "title": "Party In The USA",
         "artist": "Miley Cyrus",
         "album": "The Time Of Our Lives",
-        "img": ""
+        "img": "https://res.cloudinary.com/dmmvjuhbb/image/upload/v1707345971/thetimeofourlives_twq6kc.jpg"
     },
     {
         "title": "Levitating",
         "artist": "Dua Lipa",
         "album": "Future Nostalgia",
-        "img": ""
+        "img": "https://res.cloudinary.com/dmmvjuhbb/image/upload/v1707346049/Dua_Lipa_-_Future_Nostalgia__Official_Album_Cover_e346ke.png"
     },
     {
         "title": "Mr. Blue Sky",
         "artist": "Electric Light Orchestra",
         "album": "Out of the Blue",
-        "img": ""
+        "img": "https://res.cloudinary.com/dmmvjuhbb/image/upload/v1707346108/mrbluesky_cover_bjbpud.jpg"
     },
     {
         "title": "Escape (The Pina Colada Song)",
         "artist": "Rupert Holmes",
         "album": "Partners In Crime",
-        "img": ""
+        "img": "https://res.cloudinary.com/dmmvjuhbb/image/upload/v1707346149/Rupert_Holmes_-_Partners_In_Crime_rvxqqw.jpg"
     }
 ]
