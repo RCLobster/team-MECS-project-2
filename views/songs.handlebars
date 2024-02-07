@@ -9,24 +9,29 @@
 
 <body>
   <h3>Current songs</h3>
-  {{#if songs.length}}
-  <div class="col-md-6 project-list"></div>
+  
+  
+  
+  <div class="col-md-6 project-list">
+   {{#if songs.length}}
 
 
 
-  {{#each songs as|song|}}
-  <div class="row mb-2">
-    <p>{{song.title}}</p>
-    <p>{{song.artist}}</p>
-    <p>{{song.album}}</p>
-  </div>
+    
+    <div class="row mb-2">
+      {{#each songs as |song|}}
+      <p>Title:{{song.title}} </p>
+      <p>{{song.artist}}</p>
+      <p>{{song.album}}</p>
+       {{/each}}
+    </div>
 
 
 
-  {{/each}}
 
-  {{/if}}
-
+    
+    {{/if}}
+ </div>
 
 </body>
 
