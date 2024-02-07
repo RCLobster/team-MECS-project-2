@@ -2,8 +2,13 @@ const router = require('express').Router();
 const { User, Playlist, Song, PlaylistSongs } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
-    res.render('homepage');
+router.get('/', (req, res) => {
+    if(req.session.logged_in){
+        res.redirect('/profile');
+        return;
+    }else{
+        res.render('homepage'); 
+    }
 });
 
 router.get('/profile', withAuth, async (req, res) => {
@@ -18,7 +23,8 @@ router.get('/profile', withAuth, async (req, res) => {
         const user = userData.get({ plain: true });
         //res.json(userData);
         res.render('profile', {
-            ...user
+            ...user,
+            logged_in: req.session.logged_in
         });
 
     }catch (err){
@@ -35,7 +41,8 @@ router.get('/songs', async (req, res) => {
         //res.status(200).json(songData);
         
         res.render('songs', {
-            songs
+            songs,
+            logged_in: req.session.logged_in
         });
         
     } catch (err) {
@@ -54,7 +61,8 @@ router.get('/playlists', async (req, res) => {
         //res.status(200).json(playlists);
 
         res.render('playlist', {
-            playlists
+            playlists,
+            logged_in: req.session.logged_in
         });
 
     } catch (err) {
