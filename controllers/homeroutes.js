@@ -73,7 +73,7 @@ router.get('/playlists', async (req, res) => {
 });
 
 
-router.get('/createplaylists', async (req, res) => {
+router.get('/createplaylist', async (req, res) => {
     try {
         const songData = await Song.findAll({
             order: [['title', 'ASC']],
