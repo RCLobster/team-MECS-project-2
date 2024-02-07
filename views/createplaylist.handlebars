@@ -8,3 +8,23 @@
 </head>
 
 <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="/images/playlistsong.mp4" type="video/mp4">
+    </video>
+    <h2>Create Playlist</h2>
+    <div>
+        <h3>Playlist</h3>
+        <label for="playlist-name">Playlist name:</label>
+        <input type="text" id="playlist-name" name="playlist-name"><br><br>
+        <h3>Songs</h3>
+        <div class="form-group">
+            <label for="song-selector">Select Songs</label>
+            <select multiple class="form-control" id="song-selector">
+                {{#each songs as |song|}}
+                <option value="{{song.id}}">{{song.title}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <button type="submit">Add songs to playlist</button>
+
+    </div>
