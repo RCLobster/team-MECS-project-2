@@ -14,6 +14,9 @@ const createPlaylistHandler = async (event) => {
             body: JSON.stringify({ play_name, songs }),
             headers: { 'Content-Type': 'application/json' },
         });
+        if(response.ok){
+            alert("Playlist Created!");
+        }
     }
 };
 
