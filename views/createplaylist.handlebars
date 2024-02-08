@@ -15,20 +15,22 @@
     <div>
         <h3>Playlist</h3>
         <div class="playlistcontainer">
-             <label for="playlist-name" class="playlistText">Playlist name:</label>
-        <input type="text" id="playlist-name" name="playlist-name" placeholder="Playlist name..."><br><br>
+            <label for="playlist-name" class="playlistText">Playlist name:</label>
+            <input type="text" id="playlist-name" name="playlist-name" placeholder="Playlist name..."><br><br>
+        </div>
         <h3>Songs</h3>
-        <div class="form-group">
-            <label for="song-selector" class="playlistText">Select Songs</label>
-            <select multiple class="form-control" id="song-selector">
-                {{#each songs as |song|}}
-                <option value="{{song.id}}">{{song.title}}</option>
-                {{/each}}
-            </select>
+        <div class="playlistcontainer2">
+            <div class="form-group">
+                <label for="song-selector" class="playlistText">Select Songs:</label>
+                <select multiple class="form-control" id="song-selector">
+                    {{#each songs as |song|}}
+                    <option value="{{song.id}}">{{song.title}}</option>
+                    {{/each}}
+                </select>
+            </div>
         </div>
-        </div>
-       
+
         <button class="cpbutton" id="cpbutton" type="submit">Add songs to playlist</button>
 
-    <script src="/js/createplaylist.js"></script>
+        <script src="/js/createplaylist.js"></script>
     </div>

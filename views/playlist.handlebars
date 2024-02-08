@@ -21,9 +21,9 @@
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Artist</th>
+                    {{!-- <th scope="col">#</th> --}}
                     <th scope="col">Song Title</th>
+                    <th scope="col">Artist</th>
                     <th scope="col">Album</th>
                     <th scope="col">Album Cover</th>
                 </tr>
@@ -31,11 +31,11 @@
             <tbody>
                 {{#each playlist.songs as | song |}}
                 <tr>
-                    <td scope="row">{{song.playlistsongs.id}}</td>
+                    {{!-- <td scope="row">{{song.playlistsongs.id}}</td> --}}
                     <td>{{song.title}}</td>
                     <td>{{song.artist}}</td>
                     <td>{{song.album}}</td>
-                    <td><img src="{{song.img}}"></td>
+                    <td width="250"><img src="{{song.img}}"></td>
                 </tr>
                 {{/each}}
             </tbody>

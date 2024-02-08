@@ -14,7 +14,6 @@
 
     <div class="profileText">
         <h1>Welcome {{username}}!</h1>
-        {{#if playlists.length}}
         <div class="profileContainer">
 
             <div class="project-list">
@@ -24,29 +23,29 @@
 
                 {{#each playlists as |playlist|}}
                 <div class="row mb-2">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <h4>Playlist: {{playlist.play_name}}</h4>
                     </div>
-                    <div class="col-md-6">
-                        <ol>
-                            {{#each playlist.songs as | song |}}
-                            <li>
+                </div>
+                <div class="row">
+                    <ol>
+                        {{#each playlist.songs as | song |}}
+                        {{!-- <div class="col-md-6"> --}}
+                            <li class="col-md-6 playlist_li">
                                 <p>Title: {{song.title}}</p>
                                 <p>Artist: {{song.artist}}</p>
                                 <p>Album: {{song.album}}</p>
-                                <p><img src="{{song.img}}"></p>
+                                <p><img class="playlist_img" src="{{song.img}}"></p>
                             </li>
-                            {{/each}}
-                        </ol>
-                    </div>
+                        {{!-- </div> --}}
+                        {{/each}}
+                    </ol>
                 </div>
                 <hr>
                 {{/each}}
             </div>
-            {{/if}}
         </div>
     </div>
-
     </div>
 
 </body>

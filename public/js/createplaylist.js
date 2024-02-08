@@ -4,8 +4,9 @@ const createPlaylistHandler = async (event) => {
     const play_name = document.querySelector('#playlist-name').value.trim();
     let songs = document.querySelector('#song-selector');
 
-
+    
     songs = [...songs.selectedOptions].map(song => song.value);
+
     console.log(songs);
 
     if(play_name){
