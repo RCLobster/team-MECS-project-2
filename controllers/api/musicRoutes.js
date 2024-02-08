@@ -13,7 +13,7 @@ router.post('/addsong', async(req, res) => {
 router.post('/playlist', async (req, res) => {
     try {
         console.log("Uploading!");
-        const playlistData = await Playlist.create({play_name:req.body.play_name});
+        const playlistData = await Playlist.create({play_name:req.body.play_name, user_id: req.session.user_id});
         const songs = req.body.songs;
         const playlist_id = playlistData.id
         for (const song_id of songs){
