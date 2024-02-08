@@ -139,8 +139,20 @@ p{
   margin: 0 auto;
 }
 
-#addBtn{
+
+.dbDiv{
+  margin-bottom: 225px;
+  
+}
+.songDb{
+  border: 1px solid darkolivegreen;
+  width: 60%;
+  height: 500px;
   margin: 0 auto;
+  margin-top: 50px;
+  border-radius: 5px;
+  box-shadow: 1px 6px 6px lightblue;
+  background-color: #065b83;
 }
 
 /* Add some content at the bottom of the video/page
