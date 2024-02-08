@@ -1,4 +1,4 @@
-# Project Name
+# Playlist Maker
 ## Description
 This project aims to provide users with a platform to manage their music library through adding songs to a database, creating playlists, and accessing them later. Users can log in to the site, view their profile displaying created playlists, add songs to the database, create playlists, and manage them.
 ### User Story:
