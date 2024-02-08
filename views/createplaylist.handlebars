@@ -14,8 +14,9 @@
     <h2>Create Playlist</h2>
     <div>
         <h3>Playlist</h3>
-        <label for="playlist-name" class="playlistText">Playlist name:</label>
-        <input type="text" id="playlist-name" name="playlist-name"><br><br>
+        <div class="playlistcontainer">
+             <label for="playlist-name" class="playlistText">Playlist name:</label>
+        <input type="text" id="playlist-name" name="playlist-name" placeholder="Playlist name..."><br><br>
         <h3>Songs</h3>
         <div class="form-group">
             <label for="song-selector" class="playlistText">Select Songs</label>
@@ -25,7 +26,9 @@
                 {{/each}}
             </select>
         </div>
-        <button id="cpbutton" type="submit">Add songs to playlist</button>
+        </div>
+       
+        <button class="cpbutton" id="cpbutton" type="submit">Add songs to playlist</button>
 
     <script src="/js/createplaylist.js"></script>
     </div>

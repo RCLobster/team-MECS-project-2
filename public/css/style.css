@@ -74,6 +74,7 @@ h3, h2{
 }
 .playlistText{
   color: aliceblue;
+  margin: 0 auto;
 }
 .profileText{
   width: 50%;
@@ -87,6 +88,10 @@ h3, h2{
   width: 95%;
   padding: 15px;
   border-radius: 5px;
+}
+
+.playlistcontainer{
+  margin: 0 auto;
 }
 img{
   width: 50%;
@@ -153,6 +158,24 @@ p{
   border-radius: 5px;
   box-shadow: 1px 6px 6px lightblue;
   background-color: #065b83;
+}
+
+label{
+ padding: 15px;
+}
+
+#playlist-name{
+  padding-left: 100px;
+}
+
+.form-control{
+width: 55%;
+margin: 0 auto;
+}
+
+.cpbutton{
+  margin: 5px 500px;
+  padding: 10px;
 }
 
 /* Add some content at the bottom of the video/page
