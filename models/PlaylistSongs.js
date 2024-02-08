@@ -24,7 +24,8 @@ PlaylistSongs.init(
                 model: 'song',
                 key: 'id',
             },
-        },
+        }
+        
     },
     {
         sequelize,
