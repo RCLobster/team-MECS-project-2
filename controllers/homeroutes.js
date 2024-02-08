@@ -33,7 +33,7 @@ router.get('/profile', withAuth, async (req, res) => {
 })
 
 // /songs FIND ALL SONGS IN DB
-router.get('/songs', async (req, res) => {
+router.get('/songs', withAuth, async (req, res) => {
     try {
         const songData = await Song.findAll({
             order: [['title', 'ASC']],
@@ -53,7 +53,7 @@ router.get('/songs', async (req, res) => {
 });
 
 // /playlists
-router.get('/playlists', async (req, res) => {
+router.get('/playlists', withAuth, async (req, res) => {
     try {
         const playlistData = await Playlist.findAll({
             include: [{ model: Song, through: PlaylistSongs }, { model: User }]
@@ -73,7 +73,7 @@ router.get('/playlists', async (req, res) => {
 });
 
 
-router.get('/createplaylist', async (req, res) => {
+router.get('/createplaylist', withAuth, async (req, res) => {
     try {
         const songData = await Song.findAll({
             order: [['title', 'ASC']],
